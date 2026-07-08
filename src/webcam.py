@@ -9,7 +9,10 @@ class Webcam:
 
     def getFrame(self):
         ret, frame = self.cap.read()
-        return frame
+        if not ret:
+            return None
+
+        return cv2.resize(frame, (384, 384))
 
     def release(self):
         self.cap.release()

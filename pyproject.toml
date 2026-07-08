@@ -1,9 +1,11 @@
 [project]
 name = "opsis"
 version = "0.1.0"
-description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "opencv-python>=5.0.0.93",
+    "setuptools<81",
+    "tensorflow>=2.21.0",
+    "tensorflow-hub>=0.16.1",
 ]
