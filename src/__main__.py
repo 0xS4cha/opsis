@@ -8,7 +8,7 @@ from .stylization import Stylization
 def main():
     camera = Webcam("Webcam")
     stylization = Stylization()
-    stylization.setStyle("styles/monet.jpg")
+    stylization.setStyle("styles/picasso.jpg")
     while True:
         frame = camera.getFrame()
         frame_stylized = stylization.ApplyStyle(frame)
