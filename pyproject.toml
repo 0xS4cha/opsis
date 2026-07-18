@@ -6,6 +6,5 @@ requires-python = ">=3.12"
 dependencies = [
     "opencv-python>=5.0.0.93",
     "setuptools<81",
-    "tensorflow>=2.21.0",
-    "tensorflow-hub>=0.16.1",
+    "onnxruntime-directml>=1.16.0",
 ]

@@ -12,7 +12,7 @@ class Webcam:
         if not ret:
             return None
 
-        return cv2.resize(frame, (384, 384))
+        return cv2.resize(frame, (384 * 2, 384 * 2))
 
     def release(self):
         self.cap.release()
