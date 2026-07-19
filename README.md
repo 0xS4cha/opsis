@@ -140,10 +140,6 @@ timeline
 - [OpenCV](https://opencv.org/) - Open Source Computer Vision Library
 - [Magenta Style Transfer](https://github.com/tensorflow/magenta/tree/master/magenta/models/arbitrary_image_stylization) - Arbitrary Image Stylization Model
 
-## Disclaimer
-
-IMPORTANT — Educational use only:
-- Use this repository for study and reference only.
 
 ## Feedback
 
