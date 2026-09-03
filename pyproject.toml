@@ -6,6 +6,6 @@ requires-python = ">=3.12"
 dependencies = [
     "opencv-python>=5.0.0.93",
     "setuptools<81",
-    "onnxruntime>=1.16.0; sys_platform == 'linux'",
+    "onnxruntime-gpu>=1.16.0; sys_platform == 'linux'",
     "onnxruntime-directml>=1.16.0; sys_platform == 'win32'",
 ]
