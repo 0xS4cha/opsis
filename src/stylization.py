@@ -7,8 +7,23 @@ import numpy as np
 class Stylization:
     def __init__(self):
         self.style = None
-        providers = ['DmlExecutionProvider', 'CPUExecutionProvider']
-        self.ort_session = ort.InferenceSession("styles/magenta_stylization.onnx", providers=providers)
+        if sys.platform == "win32":
+            providers = [
+                "DmlExecutionProvider",
+                "CPUExecutionProvider",
+            ]
+        else:
+            providers = [
+                "CUDAExecutionProvider",
+                "CPUExecutionProvider",
+            ]
+
+        self.ort_session = ort.InferenceSession(
+            "styles/magenta_stylization.onnx",
+            providers=providers,
+        )
+
+        print("ONNX providers:", self.ort_session.get_providers())
 
     @functools.lru_cache(maxsize=None)
     def loadImage(self, image_url):
